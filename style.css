@@ -1,0 +1,199 @@
+/*BOM ZERAR TODAS AS IMAGENS E BORDAS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo-mario {
+    height: 150px;
+    border-radius: 50px
+}
+
+button {
+    color: wheat;    /* color: wheat; COR DA LETRA*/
+    background-color: #c51111;    /*COR DO FUNDO*/
+    border-radius: 3px;    /*CONTORNO BORDA*/
+    border: none;    /*SEM BORDA*/
+    width: 200px;    /*LARGURA*/
+    height: 50px;    /*ALTURA*/
+    cursor: pointer;    /*VIRA MÃO AO PASSR OELO BUTÃO*/
+    text-transform: uppercase;    /*DEIXA O TEXTO EM MAIUSCULO*/
+    font-weight: bold;    /*DEIXAR FONTE EM NEGRITO*/
+    margin-top: 30px;    /*ESPAÇAMENTO DO BOTÃO, DO TOPO PARA BAIXO*/
+}
+
+.mario-encanador {
+    height: 300px;
+}
+
+
+.texto-secundario {
+    line-height: 1.8
+}
+
+body {
+    height: 100vh;    /*ALTURA TOTAL DA TELA 100%, NÃO IMPORTA O TAMANHO DA DELA*/
+}
+
+.caixa-mae {
+    display: flex;
+    align-items: center;    /*CENTRALIZAR AO CENTRO NA VERTICAL*/
+    justify-content: space-around;    /*CRIAR UM ESPAÇO ENTRE ITENS NA HORIZONTAL*/
+    padding: 100px;    /*DISTANCIA POR DENTRO DA DIV*/
+    height: 100vh;    /*ALTURA TOTAL DA TELA 100%, NÃO IMPORTA O TAMANHO DA DELA*/
+}
+
+.caixa-princial {
+    width: 50%;
+}
+
+.caixa-video {
+    position: fixed;    /*VIDEO FICA FIXO NA TELA*/
+    top: 0;    /*EM CIMA*/
+    z-index: -1;    /*POR TRAS DE TUDO*/
+}
+
+video {
+     /*width: 100vw;   LARGURA TOTAL DA TELA 100%, NÃO IMPORTA O TAMANHO DA DELA*/
+min-height: 100%;
+min-width: 100%;
+position: fixed;
+top: 0;
+
+}
+
+.mascara {
+    height: 100%;    /* TELA TODA*/
+    width: 100%;    /* TELA TODA*/
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    position: fixed;
+    top: 0;
+}
+
+p {
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+
+.link-whatsapp img {
+    width: 60px;
+    position: fixed;    /*FIXADO NA TELA*/
+    right: 20px;    /*TUDO PRA DIREITA*/
+    bottom: 20px;    /*TUDO PRA BAIXO E SOBE 20PX*/
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px;    /*DISTANCIAMENTO ENTRE ELES*/
+    margin: 30px;    /*DISTANCIA 30PX PARA TODOS OS LADOS*/
+}
+
+.header img {
+    width: 50px;
+    
+}
+
+.header a {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    /*AO PASSAR O MOUSE VIRA A MAOZINHA*/
+}
+
+.header a:hover {
+    /*AO PASSAR O MOUSE MUDAR A COR*/
+    color: #c51111;
+    font-size: 50px;
+    /*ALTERA O TAMANHO DA FONTE*/
+    transition: 0.5s ease-in-out;
+}
+
+
+input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #18D80F;
+}
+
+textarea {
+    width: 270px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px; /*DISTÂNCIAR DA BORDA, SENTIDO LADO ESQUERDO*/
+    outline: #18D80F;
+}
+
+.mascara-formulario {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    height: 100vh;    /* TELA TODA*/
+    width: 100vw;    /* TELA TODA*/
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    transition: visibility 0,5s ease-in-out;
+ 
+}
+
+.formulario-fale-conosco{
+    background-color: white;
+    display: flex;
+    gap: 20px;
+    flex-direction: column; 
+    position: fixed;
+    left: -300px;
+    top: 30%;
+    padding: 20px;
+    border-radius: 5px;
+    transition: left 1s ease-in-out;
+    }
+
+@media(max-width: 1000px){
+
+p {
+    display: none;
+}
+
+.caixa-mae{
+    flex-direction: column;
+    padding: 10px;
+    justify-content: flex-start;
+}
+
+.caixa-princial{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mario-encanador{
+
+    width: 80vw;
+    height: auto;
+}
+
+.header{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.header img{
+    display: none; /*NÃO APARECER*/
+}
+
+.header a{
+   font-size: 20;
+
+}
+
+}
+
